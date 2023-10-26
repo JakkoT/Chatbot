@@ -1,17 +1,20 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
 # Create a new chat bot named Charlie
 chatbot = ChatBot('hi')
 
-trainer = ListTrainer(chatbot)
+trainer = ChatterBotCorpusTrainer(chatbot)
 
-trainer.train([
+trainer.train(
+    "chatterbot.corpus.english"
+)
 
-])
 
-# Get a response to the input text 'I would like to book a flight.'
-vastus = input()
-response = chatbot.get_response(vastus)
 
-print(response)
+
+
+
+def vastus(vastus):
+    response = chatbot.get_response(vastus)
+    return response
