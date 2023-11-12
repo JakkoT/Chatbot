@@ -7,7 +7,10 @@
 </head>
 <body>
         <ul>
-        <p>{{data}}</p>
+            {% for i in data %}
+            <p>{{i}}</p>
+            <br>
+            {% endfor %}
         </ul>
         <form action="{{ url_for('html')}}" method="post">
             <label for="küsimus">Küsimus:</label>
