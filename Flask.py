@@ -7,19 +7,21 @@ app = Flask(__name__)
 
 vastus = ["Chat History:", "  "]
 
-@app.route("/", methods =["GET", "POST"])
+@app.route("/dashboard", methods =["GET", "POST"])
 def html():
    kustuta = False
    f = open("history.txt", "r")
    küs = "Hi"
    vastus = []
    if request.method == "POST":
-      küs = request.form.get("küs")
-      print(küs)
+      if "küs" in request.form:
+         küs = request.form.get("küs")
+
       
    
    for i in f:
       vastus.append(i.strip())
+   print(küs)
    Cvastus = Chatbot.vastus(küs)
    vastus.append(küs)
    vastus.append(Cvastus)
@@ -46,19 +48,22 @@ def kustuta():
    f.write("History: ")
    return render_template('index.html')
 
+@app.route('/', methods=['POST', 'GET'])
+def sisene():
+   return render_template("sisene.html")
+
 @app.route('/login', methods=['POST'])
 def login():
     users = {"jakko" : "kristjan"}
+    global username
     username = request.form['username']
+    
     password = request.form['password']
 
     if username in users and users[username] == password:
         # Successful login, redirect to a dashboard or home page
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('html'))
     else:
         # Failed login, redirect back to the login page
-        return redirect(url_for('html'))
+        return redirect(url_for('sisene'))
 
-@app.route('/dashboard')
-def dashboard():
-    return "Welcome to the dashboard!"
