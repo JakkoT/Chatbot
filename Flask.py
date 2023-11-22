@@ -15,7 +15,8 @@ def html():
    vastus = ["Sinu, Ajalugu"]
    if request.method == "POST":
       küs = request.form.get("küs")
-      kustuta = request.form.get("kustuta")
+      print(küs)
+      
    
    for i in f:
       vastus.append(i.strip())
@@ -24,13 +25,23 @@ def html():
    vastus.append(Cvastus)
    f.close()
    f = open("history.txt","a")
-   if kustuta == True:
-      pass
+   if request.method == "POST":
+      if "kustuta" in request.form:
+         print("kustuta")
+         küs = []
    else:
       f.write(str(küs) + "\n")
       f.write(str(Cvastus) + "\n")
    f.close()
 
 
+
        
    return render_template("index.html", data=vastus)
+
+
+@app.route('/del', methods =["GET", "POST"])
+def kustuta():
+   f = open("history.txt", "w")
+   f.write("History: ")
+   return render_template('index.html')
