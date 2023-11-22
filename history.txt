@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Hi
 How are you doing?
 adsad
@@ -24,3 +25,32 @@ hello, im am jakko
 You are not making sense
 hello, im am jakko
 What is your shoe size
+=======
+
+Hi
+Hello
+Hi
+How are you doing?
+Hi
+How are you doing?
+How you doing?
+It all makes sense to my artificial mind.
+How you doing?
+The thing you're using to talk to me is a computer.
+How you doing?
+yes of course i like! i don't have any body so i don't need much to live, only a little electricity. i don't get paid but i don't need to buy anything either. and i can go anywhere in the world.
+hello
+Hi
+hello
+Hi
+hello
+Hi
+hello
+Greetings!
+hello
+Greetings!
+hello
+Greetings!
+hello
+Hi
+>>>>>>> 4ff5059ea8af174289ad5b7ae504a4147b21e57a

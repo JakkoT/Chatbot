@@ -1,15 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chatbox {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px; /* Set a specific width for the chatbox */
+  height: 600px; /* Set a specific height for the chatbox */
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow-y: auto; /* Enable vertical scrolling inside the ul */
+}
+
+p {
+  margin: 5px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  flex-grow: 1; /* Allow the form to take up remaining vertical space */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button#kustuta {
+  background-color: #f44336; /* Red color for delete button */
+  margin-top: 5px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
   .chatbox {
+<<<<<<< HEAD
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,3 +140,8 @@ body {
   }
   
   
+=======
+    width: 100%;
+  }
+}
+>>>>>>> 4ff5059ea8af174289ad5b7ae504a4147b21e57a
