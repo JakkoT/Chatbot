@@ -9,11 +9,14 @@ vastus = ["Chat History:", "  "]
 
 @app.route("/", methods =["GET", "POST"])
 def html():
+   kustuta = False
    f = open("history.txt", "r")
    küs = "Hi"
    vastus = ["Sinu, Ajalugu"]
    if request.method == "POST":
       küs = request.form.get("küs")
+      kustuta = request.form.get("kustuta")
+   
    for i in f:
       vastus.append(i.strip())
    Cvastus = Chatbot.vastus(küs)
@@ -21,8 +24,11 @@ def html():
    vastus.append(Cvastus)
    f.close()
    f = open("history.txt","a")
-   f.write(str(küs) + "\n")
-   f.write(str(Cvastus) + "\n")
+   if kustuta == True:
+      pass
+   else:
+      f.write(str(küs) + "\n")
+      f.write(str(Cvastus) + "\n")
    f.close()
 
 
