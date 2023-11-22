@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, request, redirect, url_for
 import Chatbot
 
 
@@ -12,7 +12,7 @@ def html():
    kustuta = False
    f = open("history.txt", "r")
    küs = "Hi"
-   vastus = ["Sinu, Ajalugu"]
+   vastus = []
    if request.method == "POST":
       küs = request.form.get("küs")
       print(küs)
@@ -45,3 +45,20 @@ def kustuta():
    f = open("history.txt", "w")
    f.write("History: ")
    return render_template('index.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    users = {"jakko" : "kristjan"}
+    username = request.form['username']
+    password = request.form['password']
+
+    if username in users and users[username] == password:
+        # Successful login, redirect to a dashboard or home page
+        return redirect(url_for('dashboard'))
+    else:
+        # Failed login, redirect back to the login page
+        return redirect(url_for('html'))
+
+@app.route('/dashboard')
+def dashboard():
+    return "Welcome to the dashboard!"
