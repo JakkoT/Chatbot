@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(27, 26, 23); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chatbox {
+  background-color: white;
+  border-style: double;
+  overflow: hidden;
+  width: 400px; 
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #383938;
+  color: white;
+  padding: 15px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow-y: auto; 
+}
+
+p {
+  margin: 5px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  flex-grow: 1;
+  background-color: #666666;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 5px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px 1.5px black;
+  border-radius: 5px;
+}
+
+button#kysi {
+  background-color: transparent;
+  border: 1px solid rgb(30, 30, 30);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: background-color 0.3s ease;
+}
+
+button#kustuta {
+  background-color: transparent;
+  border: 1px solid rgb(30, 30, 30);
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -20px;
+  transition: background-color 0.3s ease;
+}
+
+button#kysi:hover {
+  background-color: #4caf50;
+}
+
+button#kustuta:hover {
+  background-color: red;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  .chatbox {
+    width: 100%;
+  }
+}
+
+
+
+
+.login-container {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-style: double;
+}
+
+form#sisene2 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button#sisene {
+  background-color: #2fa833;
+  color: black;
+  padding: 10px;
+  border: 0.1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button#sisene:hover {
+  background-color: #59cf5f;
+}
