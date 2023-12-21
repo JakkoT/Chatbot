@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(27, 26, 23); 
+  background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,19 +10,18 @@ body {
 }
 
 .chatbox {
-  background-color: white;
-  border-style: double;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 400px; 
-  height: 600px;
+  width: 400px; /* Set a specific width for the chatbox */
+  height: 600px; /* Set a specific height for the chatbox */
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
 }
 
 h1 {
-  text-align: center;
-  background-color: #383938;
+  background-color: #4CAF50;
   color: white;
   padding: 15px;
   margin: 0;
@@ -33,7 +32,7 @@ ul {
   padding: 0;
   margin: 0;
   text-align: center;
-  overflow-y: auto; 
+  overflow-y: auto; /* Enable vertical scrolling inside the ul */
 }
 
 p {
@@ -45,8 +44,7 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  flex-grow: 1;
-  background-color: #666666;
+  flex-grow: 1; /* Allow the form to take up remaining vertical space */
 }
 
 label {
@@ -57,45 +55,21 @@ label {
 input {
   padding: 10px;
   margin-bottom: 10px;
-  box-shadow: 1px 1px 1px black;
-  border-radius: 5px;
 }
 
 button {
+  padding: 10px;
   width: 100px;
   height: 40px;
-  color: black;
+  background-color: #4CAF50;
+  color: white;
   border: none;
   cursor: pointer;
-  box-shadow: 1.5px 1.5px 1.5px black;
-  border-radius: 5px;
-}
-
-button#kysi {
-  background-color: transparent;
-  border: 1px solid rgb(30, 30, 30);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: background-color 0.3s ease;
 }
 
 button#kustuta {
-  background-color: transparent;
-  border: 1px solid rgb(30, 30, 30);
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: -20px;
-  transition: background-color 0.3s ease;
-}
-
-button#kysi:hover {
-  background-color: #4caf50;
-}
-
-button#kustuta:hover {
-  background-color: red;
+  background-color: #f44336; /* Red color for delete button */
+  margin-top: 5px;
 }
 
 /* Media Query for smaller screens */
@@ -113,15 +87,13 @@ button#kustuta:hover {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-style: double;
 }
 
-form#sisene2 {
+form {
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
 
 label {
@@ -133,15 +105,15 @@ input {
   margin-bottom: 10px;
 }
 
-button#sisene {
-  background-color: #2fa833;
-  color: black;
+button {
+  background-color: #4caf50;
+  color: #fff;
   padding: 10px;
-  border: 0.1px solid black;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-button#sisene:hover {
-  background-color: #59cf5f;
+button:hover {
+  background-color: #45a049;
 }
