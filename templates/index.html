@@ -22,7 +22,7 @@
       </form>
 
 
-      <form action="{{ url_for('kustuta') }}" method="get">
+      <form action="{{ url_for('kustuta', username=current_user.id) }}" method="get">
         <button type="submit" id="kustuta" name="kustuta" value="kustuta">Kustuta ajalugu</button>
       </form>
     </div>

@@ -31,8 +31,8 @@ def load_user(user_id):
 vastus = ["Chat History:", "  "]
 
 
-@app.route('/del', methods =["GET", "POST"])
-def kustuta():
+@app.route('/del/<username>', methods =["GET", "POST"])
+def kustuta(username):
    f = open(f"history{username}.txt", "w")
    f.write("History: ")
    return render_template('index.html')
@@ -43,7 +43,6 @@ def sisene():
 
 
 
-# Default route - Login Page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -58,7 +57,6 @@ def login():
     
     return render_template('sisene.html')
 
-# Dashboard route - Only accessible after login
 @app.route('/dashboard/<username>', methods=['POST', 'GET'])
 @login_required
 def html(username):
@@ -66,7 +64,6 @@ def html(username):
       
       user_data = users[username]
 
-      kustuta = False
       f = open(f"history{username}.txt", "a")
       f.close()
       f = open(f"history{username}.txt", "r")
@@ -100,7 +97,6 @@ def html(username):
     else:
         return redirect(url_for('login'))
 
-# Logout route
 @app.route('/logout')
 @login_required
 def logout():
