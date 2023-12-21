@@ -15,24 +15,24 @@
         <br />
         {% endfor %}
       </ul>
-      <form action="{{ url_for('html', username=current_user.id) }}" method="post">
+      <form
+        id="chat"
+        action="{{ url_for('html', username=current_user.id) }}"
+        method="post"
+      >
         <label for="küsimus">Küsimus:</label>
         <input type="text" id="text" name="küs" placeholder="Küsimus" />
-        <button type="submit">Küsi</button>
+        <button id="kysi" type="submit">Küsi</button>
       </form>
 
-
-      <form action="{{ url_for('kustuta', username=current_user.id) }}" method="get">
-        <button type="submit" id="kustuta" name="kustuta" value="kustuta">Kustuta ajalugu</button>
+      <form
+        action="{{ url_for('kustuta', username=current_user.id) }}"
+        method="get"
+      >
+        <button type="submit" id="kustuta" name="kustuta" value="kustuta">
+          Kustuta ajalugu
+        </button>
       </form>
     </div>
-
-
-
-
-
-
-
-
   </body>
 </html>
